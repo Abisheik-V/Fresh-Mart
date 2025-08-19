@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fresh Mart - Products</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f9fff9;
+      color: #333;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #2e7d32;
+    }
+    .navbar-brand, .nav-link, .dropdown-item {
+      color: white !important;
+      font-weight: bold;
+    }
+    .nav-link:hover {
+      color: hsl(125, 20%, 13%) !important;
+    }
+    .category-title {
+      margin: 40px 0 20px;
+      font-weight: bold;
+      color: #2e7d32;
+    }
+    .card img {
+      height: 180px;
+      object-fit: cover;
+    }
+    .btn-success {
+      background-color: #2e7d32;
+      border: none;
+    }
+    /* Footer */
+    footer {
+      background: #2e7d32;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 20px;
+    }
+     footer a:hover {
+      color: hsl(125, 20%, 13%) !important;
+    }
+    /* Media Queries for product.html */
+
+/* Small devices (max-width: 576px) → Mobile phones */
+@media (max-width: 576px) {
+  .category-title {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .card {
+    margin: 0 auto;
+    width: 90%;
+  }
+  .card img {
+    height: 150px;
+  }
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+  .btn-success {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+/* Medium devices (577px – 768px) → Tablets */
+@media (min-width: 577px) and (max-width: 768px) {
+  .category-title {
+    font-size: 1.8rem;
+    text-align: left;
+    margin-left: 10px;
+  }
+  .card {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .card img {
+    height: 160px;
+  }
+  .btn-success {
+    padding: 10px 20px;
+    font-size: 15px;
+  }
+}
+
+/* Large devices (769px – 1200px) → Laptops */
+@media (min-width: 769px) and (max-width: 1200px) {
+  .category-title {
+    font-size: 2rem;
+  }
+  .card img {
+    height: 170px;
+  }
+  .btn-success {
+    padding: 10px 22px;
+    font-size: 16px;
+  }
+}
+
+/* Extra large devices (above 1200px) → Desktops */
+@media (min-width: 1201px) {
+  .category-title {
+    font-size: 2.2rem;
+  }
+  .card img {
+    height: 180px;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand" href="index.html"> 🌱 Fresh Mart</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon bg-light"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="product.html">Products</a></li>
+        <li class="nav-item"><a class="nav-link" href="membership.html">Memberships</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="cart.html">Cart 🛒</a></li>
+        <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <!-- Products Section -->
+  <div class="container my-5">
+
+    <!-- Vegetables -->
+    <h2 class="category-title" data-aos="fade-right">Vegetables</h2>
+    <div class="row g-4">
+      <div class="col-md-3" data-aos="zoom-in">
+        <div class="card">
+          <img src="Assets/photos/tomato.jpg" class="card-img-top" alt="Tomato">
+          <div class="card-body text-center">
+            <h5 class="card-title">Tomato</h5><span class="badge-pill">1 kg</span>
+            <p class="price">₹40</p>
+            <button class="btn btn-success add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3" data-aos="zoom-in">
+        <div class="card">
+          <img src="Assets/photos/carrot.jpg" class="card-img-top" alt="Carrots">
+          <div class="card-body text-center">
+            <h5 class="card-title">Carrots</h5><span class="badge-pill">1 kg</span>
+            <p class="price">₹60</p>
+            <button class="btn btn-success add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3" data-aos="zoom-in">
+        <div class="card">
+          <img src="Assets/photos/brinjal.jpg" class="card-img-top" alt="Brinjal">
+          <div class="card-body text-center">
+            <h5 class="card-title">Brinjal</h5><span class="badge-pill">1 kg</span>
+            <p class="price">₹50</p>
+            <button class="btn btn-success add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3" data-aos="zoom-in">
+        <div class="card">
+          <img src="Assets/photos/onion.jpg" class="card-img-top" alt="Onion">
+          <div class="card-body text-center">
+            <h5 class="card-title">Onion</h5><span class="badge-pill">1 kg</span>
+            <p class="price">₹60</p>
+            <button class="btn btn-success add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3" data-aos="zoom-in">
+        <div class="card">
+          <img src="Assets/photos/potato.jpg" class="card-img-top" alt="Potato">
+          <div class="card-body text-center">
+            <h5 class="card-title">Potato</h5><span class="badge-pill">1 kg</span>
+            <p class="price">₹70</p>
+            <button class="btn btn-success add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3" data-aos="zoom-in">
+        <div class="card">
+          <img src="Assets/photos/cabbage.jpg" class="card-img-top" alt="Cabbage">
+          <div class="card-body text-center">
+            <h5 class="card-title">Cabbage</h5><span class="badge-pill">1 kg</span>
+            <p class="price">₹40</p>
+            <button class="btn btn-success add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3" data-aos="zoom-in">
+        <div class="card">
+          <img src="Assets/photos/lady's finger.jpg" class="card-img-top" alt="Lady's Finger">
+          <div class="card-body text-center">
+            <h5 class="card-title">Lady's Finger</h5><span class="badge-pill">1 kg</span>
+            <p class="price">₹70</p>
+            <button class="btn btn-success add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3" data-aos="zoom-in">
+        <div class="card">
+          <img src="Assets/photos/green peas.jpg" class="card-img-top" alt="Green Peas">
+          <div class="card-body text-center">
+            <h5 class="card-title">Green Peas</h5><span class="badge-pill">1 kg</span>
+            <p class="price">₹80</p>
+            <button class="btn btn-success add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3" data-aos="zoom-in">
+        <div class="card">
+          <img src="Assets/photos/beans.jpg" class="card-img-top" alt="Beans">
+          <div class="card-body text-center">
+            <h5 class="card-title">Beans</h5><span class="badge-pill">1 kg</span>
+            <p class="price">₹40</p>
+            <button class="btn btn-success add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3" data-aos="zoom-in">
+        <div class="card">
+          <img src="Assets/photos/beetroot.jpg" class="card-img-top" alt="Beetroot">
+          <div class="card-body text-center">
+            <h5 class="card-title">Beetroot</h5><span class="badge-pill">1 kg</span>
+            <p class="price">₹60</p>
+            <button class="btn btn-success add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3" data-aos="zoom-in">
+        <div class="card">
+          <img src="Assets/photos/bitter gourd.jpg" class="card-img-top" alt="Bitter Gourd">
+          <div class="card-body text-center">
+            <h5 class="card-title">Bitter Gourd</h5><span class="badge-pill">1 kg</span>
+            <p class="price">₹40</p>
+            <button class="btn btn-success add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3" data-aos="zoom-in">
+        <div class="card">
+          <img src="Assets/photos/drumstick.jpg" class="card-img-top" alt="Drumstick">
+          <div class="card-body text-center">
+            <h5 class="card-title">Drumstick</h5><span class="badge-pill">1 kg</span>
+            <p class="price">₹50</p>
+            <button class="btn btn-success add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fruits -->
+    <h2 class="category-title" data-aos="fade-right">Fruits</h2>
+    <div class="row g-4">
+      <div class="col-md-3" data-aos="zoom-in">
+        <div class="card">
+          <img src="Assets/photos/apple.jpg" class="card-img-top" alt="Apple">
+          <div class="card-body text-center">
+            <h5 class="card-title">Apple</h5><span class="badge-pill">1 kg</span>
+            <p class="price">₹160</p>
+            <button class="btn btn-success add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3" data-aos="zoom-in">
+        <div class="card">
+          <img src="Assets/photos/mango.jpg" class="card-img-top" alt="Mango">
+          <div class="card-body text-center">
+            <h5 class="card-title">Mango</h5><span class="badge-pill">1 kg</span>
+            <p class="price">₹120</p>
+            <button class="btn btn-success add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3" data-aos="zoom-in">
+        <div class="card">
+          <img src="Assets/photos/orange.jpg" class="card-img-top" alt="Orange">
+          <div class="card-body text-center">
+            <h5 class="card-title">Orange</h5><span class="badge-pill">1 kg</span>
+            <p class="price">₹80</p>
+            <button class="btn btn-success add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3" data-aos="zoom-in">
+        <div class="card">
+          <img src="Assets/photos/grapes.jpg" class="card-img-top" alt="Grapes">
+          <div class="card-body text-center">
+            <h5 class="card-title">Grapes</h5><span class="badge-pill">1/2kg</span>
+            <p class="price">₹100</p>
+            <button class="btn btn-success add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3" data-aos="zoom-in">
+        <div class="card">
+          <img src="Assets/photos/pineapple.jpg" class="card-img-top" alt="Pineapple">
+          <div class="card-body text-center">
+            <h5 class="card-title">Pineapple</h5><span class="badge-pill">per piece</span>
+            <p class="price">₹70</p>
+            <button class="btn btn-success add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3" data-aos="zoom-in">
+        <div class="card">
+          <img src="Assets/photos/papaya.jpg" class="card-img-top" alt="Papaya">
+          <div class="card-body text-center">
+            <h5 class="card-title">Papaya</h5><span class="badge-pill">1 kg</span>
+            <p class="price">₹56</p>
+            <button class="btn btn-success add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3" data-aos="zoom-in">
+        <div class="card">
+          <img src="Assets/photos/watermelon.jpg" class="card-img-top" alt="Watermelon">
+          <div class="card-body text-center">
+            <h5 class="card-title">Watermelon</h5><span class="badge-pill">1 kg</span>
+            <p class="price">₹30</p>
+            <button class="btn btn-success add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3" data-aos="zoom-in">
+        <div class="card">
+          <img src="Assets/photos/guava.jpg" class="card-img-top" alt="Guava">
+          <div class="card-body text-center">
+            <h5 class="card-title">Guava</h5><span class="badge-pill">1 kg</span>
+            <p class="price">₹60</p>
+            <button class="btn btn-success add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3" data-aos="zoom-in">
+        <div class="card">
+          <img src="Assets/photos/Pomegranate.jpg" class="card-img-top" alt="Pomegranate">
+          <div class="card-body text-center">
+            <h5 class="card-title">Pomegranate</h5><span class="badge-pill">1 kg</span>
+            <p class="price">₹150</p>
+            <button class="btn btn-success add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3" data-aos="zoom-in">
+        <div class="card">
+          <img src="Assets/photos/pear.jpg" class="card-img-top" alt="Pear">
+          <div class="card-body text-center">
+            <h5 class="card-title">Pear</h5><span class="badge-pill">1 kg</span>
+            <p class="price">₹120</p>
+            <button class="btn btn-success add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3" data-aos="zoom-in">
+        <div class="card">
+          <img src="Assets/photos/Strawberry.jpg" class="card-img-top" alt="Strawberry">
+          <div class="card-body text-center">
+            <h5 class="card-title">Strawberry</h5><span class="badge-pill">per 200g pack</span>
+            <p class="price">₹100</p>
+            <button class="btn btn-success add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3" data-aos="zoom-in">
+        <div class="card">
+          <img src="Assets/photos/banana.jpg" class="card-img-top" alt="Bananas">
+          <div class="card-body text-center">
+            <h5 class="card-title">Bananas</h5><span class="badge-pill">per dozen</span>
+            <p class="price">₹50</p>
+            <button class="btn btn-success add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Meat -->
+    <h2 class="category-title" data-aos="fade-right">Fresh Meat</h2>
+    <div class="row g-4">
+      <div class="col-md-3" data-aos="zoom-in">
+        <div class="card">
+          <img src="Assets/photos/chicken.jpg" class="card-img-top" alt="Chicken">
+          <div class="card-body text-center">
+            <h5 class="card-title">Chicken</h5><span class="badge-pill">whole chicken</span>
+            <p class="price">₹200</p>
+            <button class="btn btn-success add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3" data-aos="zoom-in">
+        <div class="card">
+          <img src="Assets/photos/Boneless chicken.jpg" class="card-img-top" alt="Boneless Chicken">
+          <div class="card-body text-center">
+            <h5 class="card-title">Boneless Chicken</h5><span class="badge-pill">1 kg</span>
+            <p class="price">₹220</p>
+            <button class="btn btn-success add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3" data-aos="zoom-in">
+        <div class="card">
+          <img src="Assets/photos/Chicken liver.jpg" class="card-img-top" alt="Chicken Liver">
+          <div class="card-body text-center">
+            <h5 class="card-title">Chicken Liver</h5><span class="badge-pill">1 kg</span>
+            <p class="price">₹260</p>
+            <button class="btn btn-success add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3" data-aos="zoom-in">
+        <div class="card">
+          <img src="Assets/photos/Skinless chicken.jpg" class="card-img-top" alt="Skinless Chicken">
+          <div class="card-body text-center">
+            <h5 class="card-title">Skinless Chicken</h5><span class="badge-pill">whole</span>
+            <p class="price">₹220</p>
+            <button class="btn btn-success add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3" data-aos="zoom-in">
+        <div class="card">
+          <img src="Assets/photos/Boneless Mutton.jpg" class="card-img-top" alt="Boneless Mutton">
+          <div class="card-body text-center">
+            <h5 class="card-title">Boneless Mutton</h5><span class="badge-pill">1 kg</span>
+            <p class="price">₹750</p>
+            <button class="btn btn-success add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3" data-aos="zoom-in">
+        <div class="card">
+          <img src="Assets/photos/mutton-brain.jpg" class="card-img-top" alt="Mutton Brain">
+          <div class="card-body text-center">
+            <h5 class="card-title">Mutton Brain</h5><span class="badge-pill">1 kg</span>
+            <p class="price">₹580</p>
+            <button class="btn btn-success add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3" data-aos="zoom-in">
+        <div class="card">
+          <img src="Assets/photos/mutton Liver.jpg" class="card-img-top" alt="Mutton Liver">
+          <div class="card-body text-center">
+            <h5 class="card-title">Mutton Liver</h5><span class="badge-pill">1 kg</span>
+            <p class="price">₹850</p>
+            <button class="btn btn-success add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3" data-aos="zoom-in">
+        <div class="card">
+          <img src="Assets/photos/Mutton Intestine.jpg" class="card-img-top" alt="Mutton Intestine">
+          <div class="card-body text-center">
+            <h5 class="card-title">Mutton Intestine</h5><span class="badge-pill">1 kg</span>
+            <p class="price">₹600</p>
+            <button class="btn btn-success add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3" data-aos="zoom-in">
+        <div class="card">
+          <img src="Assets/photos/mutton bone.jpg" class="card-img-top" alt="Mutton Bone">
+          <div class="card-body text-center">
+            <h5 class="card-title">Mutton Bone</h5><span class="badge-pill">1 kg</span>
+            <p class="price">₹600</p>
+            <button class="btn btn-success add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dairy Products -->
+    <h2 class="category-title" data-aos="fade-right">Dairy Products</h2>
+    <div class="row g-4">
+      <div class="col-md-3" data-aos="zoom-in">
+        <div class="card">
+          <img src="Assets/photos/milk.jpg" class="card-img-top" alt="Milk">
+          <div class="card-body text-center">
+            <h5 class="card-title">Milk</h5><span class="badge-pill">per liter</span>
+            <p class="price">₹60</p>
+            <button class="btn btn-success add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3" data-aos="zoom-in">
+        <div class="card">
+          <img src="Assets/photos/curd.jpg" class="card-img-top" alt="Curd">
+          <div class="card-body text-center">
+            <h5 class="card-title">Curd</h5><span class="badge-pill">per liter</span>
+            <p class="price">₹80</p>
+            <button class="btn btn-success add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3" data-aos="zoom-in">
+        <div class="card">
+          <img src="Assets/photos/cheese.jpg" class="card-img-top" alt="Cheese">
+          <div class="card-body text-center">
+            <h5 class="card-title">Cheese</h5><span class="badge-pill">1/2kg</span>
+            <p class="price">₹150</p>
+            <button class="btn btn-success add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3" data-aos="zoom-in">
+        <div class="card">
+          <img src="Assets/photos/paneer.jpg" class="card-img-top" alt="Paneer">
+          <div class="card-body text-center">
+            <h5 class="card-title">Paneer</h5><span class="badge-pill">1/2kg</span>
+            <p class="price">₹200</p>
+            <button class="btn btn-success add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3" data-aos="zoom-in">
+        <div class="card">
+          <img src="Assets/photos/butter.jpg" class="card-img-top" alt="Butter">
+          <div class="card-body text-center">
+            <h5 class="card-title">Butter</h5><span class="badge-pill">1/2kg</span>
+            <p class="price">₹250</p>
+            <button class="btn btn-success add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3" data-aos="zoom-in">
+        <div class="card">
+          <img src="Assets/photos/fresh cream.jpg" class="card-img-top" alt="Fresh Cream">
+          <div class="card-body text-center">
+            <h5 class="card-title">Fresh Cream</h5><span class="badge-pill">1/2kg</span>
+            <p class="price">₹150</p>
+            <button class="btn btn-success add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="pt-4">
+  <div class="container">
+    <div class="row">
+      
+      <!-- Quick Links -->
+      <div class="col-md-4 mb-3">
+        <h5>Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+          <li><a href="products.html" class="text-white text-decoration-none">Products</a></li>
+          <li><a href="memberships.html" class="text-white text-decoration-none">Memberships</a></li>
+          <li><a href="about.html" class="text-white text-decoration-none">About</a></li>
+          <li><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-md-4 mb-3">
+        <h5>Contact Us</h5>
+        <p class="mb-1">📍 89, patti street,3rd cross sivakasi</p>
+        <p class="mb-1">📞 +91 95007 821257</p>
+        <p class="mb-0">✉️ abithamizha@gmail.com</p>
+      </div>
+
+      <!-- Social Media -->
+      <div class="col-md-4 mb-3">
+        <h5>Follow Us</h5>
+        <a href="#" class="text-white me-3 fs-4"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="text-white me-3 fs-4"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="text-white fs-4"><i class="bi bi-twitter"></i></a>
+      </div>
+    </div>
+    <hr class="border-light">
+    <div class="text-center">
+      <p class="mb-0">&copy; 2025 Fresh Mart | All Rights Reserved</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    document.querySelectorAll(".add-to-cart").forEach(button => {
+      button.addEventListener("click", function() {
+        let card = button.closest(".card");
+        let name = card.querySelector(".card-title").innerText;
+        let price = parseFloat(card.querySelector(".price").innerText);
+
+        let existing = cart.find(item => item.name === name);
+        if (existing) {
+          existing.quantity++;
+        } else {
+          cart.push({ name, price, quantity: 1 });
+        }
+
+        localStorage.setItem("cart", JSON.stringify(cart));
+        alert(name + " added to cart!");
+      });
+    });
+  </script>
+</body>
+</html>

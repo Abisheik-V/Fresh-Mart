@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fresh Mart - Home</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #f9fff9;
+      color: #333;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #2e7d32;
+    }
+    .navbar-brand, .nav-link, .dropdown-item {
+      color: white !important;
+      font-weight: bold;
+    }
+    .nav-link:hover {
+      color: hsl(125, 20%, 13%) !important;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: url('Assets/photos/vegetables.jpg') center/cover no-repeat;
+      height: 75vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      color: white;
+      background: rgba(0,0,0,0.45);
+      padding: 15px;
+      border-radius: 10px;
+    }
+
+    /* Cards */
+    .card {
+      border-radius: 12px;
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    /* Footer */
+    footer {
+      background: #2e7d32;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 20px;
+    }
+    footer a:hover {
+      color: hsl(125, 20%, 13%) !important;
+    }
+    /* Media Queries for Index Page */
+
+/* Small devices (up to 576px) */
+@media (max-width: 576px) {
+  header {
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+  .navbar .nav-link {
+    font-size: 14px;
+    padding: 5px;
+  }
+  .feature-products .card {
+    margin-bottom: 1rem;
+  }
+  footer {
+    font-size: 14px;
+    text-align: center;
+    padding: 10px;
+  }
+}
+
+/* Medium devices (576px - 768px) */
+@media (min-width: 577px) and (max-width: 768px) {
+  .feature-products .card {
+    margin-bottom: 1.5rem;
+  }
+  header h1 {
+    font-size: 28px;
+  }
+  header p {
+    font-size: 16px;
+  }
+}
+
+/* Tablets & small laptops (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  header h1 {
+    font-size: 32px;
+  }
+  .feature-products .card img {
+    height: 180px;
+    object-fit: cover;
+  }
+}
+
+/* Large screens (above 1024px) */
+@media (min-width: 1025px) {
+  header h1 {
+    font-size: 40px;
+  }
+  .feature-products .card img {
+    height: 220px;
+    object-fit: cover;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand" href="index.html"> 🌱 Fresh Mart</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon bg-light"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="product.html">Products</a></li>
+        <li class="nav-item"><a class="nav-link" href="membership.html">Memberships</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="cart.html">Cart 🛒</a></li>
+        <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<div class="hero" data-aos="fade-up">
+  <h1>Fresh & Organic Groceries Delivered 🌱</h1>
+</div>
+
+<!-- Featured Products -->
+<div class="container my-5">
+  <h2 class="text-center mb-4" data-aos="zoom-in">Featured Products</h2>
+  <div class="row g-4">
+    
+    <!-- Tomato -->
+    <div class="col-md-3 col-sm-6" data-aos="fade-up">
+      <div class="card shadow">
+        <img src="Assets/photos/fresh tomato.jpg" class="card-img-top" alt="Tomatoes">
+        <div class="card-body text-center">
+          <h5 class="card-title">Fresh Tomatoes</h5>
+          <p class="card-text">₹50 / kg</p>
+          <button class="btn btn-success add-to-cart" data-name="Fresh Tomatoes" data-price="50">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Apples -->
+    <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-delay="100">
+      <div class="card shadow">
+        <img src="Assets/photos/Red apple.jpg" class="card-img-top" alt="Apples">
+        <div class="card-body text-center">
+          <h5 class="card-title">Red Apples</h5>
+          <p class="card-text">₹120 / kg</p>
+          <button class="btn btn-success add-to-cart" data-name="Red Apples" data-price="120">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chicken -->
+    <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-delay="200">
+      <div class="card shadow">
+        <img src="Assets/photos/chicken.jpg" class="card-img-top" alt="Chicken">
+        <div class="card-body text-center">
+          <h5 class="card-title">Fresh Chicken</h5>
+          <p class="card-text">₹220 / kg</p>
+          <button class="btn btn-success add-to-cart" data-name="Fresh Chicken" data-price="220">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Milk -->
+    <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-delay="300">
+      <div class="card shadow">
+        <img src="Assets/photos/milk.jpg" class="card-img-top" alt="Milk">
+        <div class="card-body text-center">
+          <h5 class="card-title">Organic Milk</h5>
+          <p class="card-text">₹60 / litre</p>
+          <button class="btn btn-success add-to-cart" data-name="Organic Milk" data-price="60">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- Shop Now Section -->
+<div class="container my-5" data-aos="zoom-in">
+  <div class="p-5 text-center rounded-4 shadow" 
+       style="background: linear-gradient(135deg, #2e7d32, #66bb6a); color: white;">
+    <h2 class="mb-3">Shop Fresh with Us 🛒</h2>
+    <p class="mb-4">Get fresh vegetables, fruits, meats, and dairy delivered at your doorstep.</p>
+    <a href="product.html" class="btn btn-light btn-lg fw-bold">Visit Shop</a>
+  </div>
+</div>
+
+
+<!-- Footer -->
+<footer class="pt-4">
+  <div class="container">
+    <div class="row">
+      
+      <!-- Quick Links -->
+      <div class="col-md-4 mb-3">
+        <h5>Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+          <li><a href="products.html" class="text-white text-decoration-none">Products</a></li>
+          <li><a href="memberships.html" class="text-white text-decoration-none">Memberships</a></li>
+          <li><a href="about.html" class="text-white text-decoration-none">About</a></li>
+          <li><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-md-4 mb-3">
+        <h5>Contact Us</h5>
+        <p class="mb-1">📍 89, patti street,3rd cross sivakasi</p>
+        <p class="mb-1">📞 +91 95007 821257</p>
+        <p class="mb-0">✉️ abithamizha@gmail.com</p>
+      </div>
+
+      <!-- Social Media -->
+      <div class="col-md-4 mb-3">
+        <h5>Follow Us</h5>
+        <a href="#" class="text-white me-3 fs-4"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="text-white me-3 fs-4"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="text-white fs-4"><i class="bi bi-twitter"></i></a>
+      </div>
+    </div>
+    <hr class="border-light">
+    <div class="text-center">
+      <p class="mb-0">&copy; 2025 Fresh Mart | All Rights Reserved</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+
+<!-- Bootstrap JS + AOS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 1000, once: true });
+
+  // Cart Functionality using localStorage
+  const buttons = document.querySelectorAll(".add-to-cart");
+  buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const name = btn.getAttribute("data-name");
+      const price = btn.getAttribute("data-price");
+
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      cart.push({ name, price });
+      localStorage.setItem("cart", JSON.stringify(cart));
+
+      alert(name + " added to cart 🛒");
+    });
+  });
+</script>
+</body>
+</html>

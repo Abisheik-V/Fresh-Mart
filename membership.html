@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fresh Mart | Memberships</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #f9fff9;
+      color: #333;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #2e7d32;
+    }
+    .navbar-brand, .nav-link, .dropdown-item {
+      color: white !important;
+      font-weight: bold;
+    }
+    .nav-link:hover {
+      color: hsl(125, 20%, 13%) !important;
+    }
+    header {
+      background: url('Assets/photos/vegetables.jpg') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 5rem 2rem;
+    }
+    header h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+    }
+    .membership-card {
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .membership-card:hover {
+      transform: translateY(-8px);
+    }
+     footer {
+      background: #2e7d32;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 20px;
+    }
+     footer a:hover {
+      color: hsl(125, 20%, 13%) !important;
+    }
+
+    /* Media Queries */
+    @media (max-width: 576px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      header p {
+        font-size: 14px;
+      }
+    }
+    @media (min-width: 577px) and (max-width: 768px) {
+      header h1 {
+        font-size: 2.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand" href="index.html"> 🌱 Fresh Mart</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon bg-light"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="product.html">Products</a></li>
+        <li class="nav-item"><a class="nav-link" href="membership.html">Memberships</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="cart.html">Cart 🛒</a></li>
+        <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<header>
+  <h1 data-aos="fade-up">Membership Plans</h1>
+  <p data-aos="fade-up" data-aos-delay="200">Choose a plan that keeps your family healthy & fresh 🌿</p>
+</header>
+
+<!-- Membership Plans -->
+<div class="container py-5">
+  <div class="row g-4">
+    <!-- Weekly Plan -->
+    <div class="col-md-6" data-aos="flip-left">
+      <div class="card membership-card text-center p-4">
+        <h3 class="fw-bold text-success">Weekly Plan</h3>
+        <p class="text-muted">Perfect for small families</p>
+        <h2 class="fw-bold">₹499 / week</h2>
+        <ul class="list-unstyled mt-3">
+          <li>✔ Fresh Veggies & Fruits</li>
+          <li>✔ 2 kg Chicken or Fish</li>
+          <li>✔ Free Home Delivery</li>
+        </ul>
+        <a href="cart.html" class="btn btn-success mt-3">Choose Weekly</a>
+      </div>
+    </div>
+
+    <!-- Monthly Plan -->
+    <div class="col-md-6" data-aos="flip-right">
+      <div class="card membership-card text-center p-4">
+        <h3 class="fw-bold text-success">Monthly Plan</h3>
+        <p class="text-muted">Best value for families</p>
+        <h2 class="fw-bold">₹1799 / month</h2>
+        <ul class="list-unstyled mt-3">
+          <li>✔ Fresh Veggies & Fruits</li>
+          <li>✔ 5 kg Chicken or Fish + 2 kg Mutton</li>
+          <li>✔ Free Home Delivery</li>
+          <li>✔ Exclusive Dairy Discounts</li>
+        </ul>
+        <a href="cart.html" class="btn btn-success mt-3">Choose Monthly</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="pt-4">
+  <div class="container">
+    <div class="row">
+      
+      <!-- Quick Links -->
+      <div class="col-md-4 mb-3">
+        <h5>Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+          <li><a href="products.html" class="text-white text-decoration-none">Products</a></li>
+          <li><a href="memberships.html" class="text-white text-decoration-none">Memberships</a></li>
+          <li><a href="about.html" class="text-white text-decoration-none">About</a></li>
+          <li><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-md-4 mb-3">
+        <h5>Contact Us</h5>
+        <p class="mb-1">📍 89, patti street,3rd cross sivakasi</p>
+        <p class="mb-1">📞 +91 95007 821257</p>
+        <p class="mb-0">✉️ abithamizha@gmail.com</p>
+      </div>
+
+      <!-- Social Media -->
+      <div class="col-md-4 mb-3">
+        <h5>Follow Us</h5>
+        <a href="#" class="text-white me-3 fs-4"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="text-white me-3 fs-4"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="text-white fs-4"><i class="bi bi-twitter"></i></a>
+      </div>
+    </div>
+    <hr class="border-light">
+    <div class="text-center">
+      <p class="mb-0">&copy; 2025 Fresh Mart | All Rights Reserved</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+<!-- Bootstrap Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+</body>
+</html>

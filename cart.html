@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fresh Mart | Cart</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+   body {
+      background-color: #f9fff9;
+      color: #333;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #2e7d32;
+    }
+    .navbar-brand, .nav-link, .dropdown-item {
+      color: white !important;
+      font-weight: bold;
+    }
+    .nav-link:hover {
+      color: hsl(125, 20%, 13%) !important;
+    }
+    header {
+      background: url('Assets/photos/vegetables.jpg') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 5rem 2rem;
+    }
+    header h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+    }
+    table {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    .total-box {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+   footer {
+      background: #2e7d32;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 20px;
+    }
+     footer a:hover {
+      color: hsl(125, 20%, 13%) !important;
+    }
+    /* Responsive Media Queries for Cart Page */
+
+/* Small Devices (max-width: 576px) */
+@media (max-width: 576px) {
+  header {
+    padding: 2rem 1rem;
+  }
+  header h1 {
+    font-size: 1.5rem;
+  }
+  header p {
+    font-size: 0.9rem;
+  }
+  .cart-item {
+    font-size: 0.9rem;
+  }
+  .cart-item .col-md-6,
+  .cart-item .col-md-2 {
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+  .total-box {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+  .btn-lg {
+    width: 100%;
+    font-size: 1rem;
+  }
+}
+
+/* Medium Devices (max-width: 768px) */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+  .cart-item .col-md-6 {
+    font-size: 1rem;
+  }
+  .total-box {
+    font-size: 1.2rem;
+  }
+}
+
+/* Large Devices (max-width: 992px) */
+@media (max-width: 992px) {
+  header h1 {
+    font-size: 2rem;
+  }
+  .cart-item .col-md-6 {
+    font-size: 1.1rem;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand" href="index.html"> 🌱 Fresh Mart</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon bg-light"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="product.html">Products</a></li>
+        <li class="nav-item"><a class="nav-link" href="membership.html">Memberships</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="cart.html">Cart 🛒</a></li>
+        <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<header>
+  <h1 data-aos="fade-up">🛒 Your Shopping Cart</h1>
+</header>
+
+<!-- Cart Section -->
+<section class="container py-5">
+  <div class="row g-4">
+    <!-- Cart Table -->
+    <div class="col-lg-8" data-aos="fade-right">
+      <table class="table align-middle text-center">
+        <thead class="table-success">
+          <tr>
+            <th>Product</th>
+            <th>Price (₹)</th>
+            <th>Quantity</th>
+            <th>Total (₹)</th>
+            <th>Remove</th>
+          </tr>
+        </thead>
+        <tbody id="cart-items">
+          <!-- JS will add rows here -->
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Summary -->
+    <div class="col-lg-4" data-aos="fade-left">
+      <div class="total-box">
+        <h4 class="text-success">Order Summary</h4>
+        <p><strong>Subtotal:</strong> ₹<span id="subtotal">0</span></p>
+        <p><strong>Tax (5%):</strong> ₹<span id="tax">0</span></p>
+        <h5><strong>Grand Total:</strong> ₹<span id="grandtotal">0</span></h5>
+        <a href="payment.html" class="btn btn-success w-100 mt-3">Proceed to Checkout</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="pt-4">
+  <div class="container">
+    <div class="row">
+      
+      <!-- Quick Links -->
+      <div class="col-md-4 mb-3">
+        <h5>Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+          <li><a href="products.html" class="text-white text-decoration-none">Products</a></li>
+          <li><a href="memberships.html" class="text-white text-decoration-none">Memberships</a></li>
+          <li><a href="about.html" class="text-white text-decoration-none">About</a></li>
+          <li><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-md-4 mb-3">
+        <h5>Contact Us</h5>
+        <p class="mb-1">📍 89, patti street,3rd cross sivakasi</p>
+        <p class="mb-1">📞 +91 95007 821257</p>
+        <p class="mb-0">✉️ abithamizha@gmail.com</p>
+      </div>
+
+      <!-- Social Media -->
+      <div class="col-md-4 mb-3">
+        <h5>Follow Us</h5>
+        <a href="#" class="text-white me-3 fs-4"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="text-white me-3 fs-4"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="text-white fs-4"><i class="bi bi-twitter"></i></a>
+      </div>
+    </div>
+    <hr class="border-light">
+    <div class="text-center">
+      <p class="mb-0">&copy; 2025 Fresh Mart | All Rights Reserved</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+
+  // Load Cart Items from Local Storage
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  function renderCart() {
+    const cartTable = document.getElementById("cart-items");
+    cartTable.innerHTML = "";
+
+    let subtotal = 0;
+
+    cart.forEach((item, index) => {
+      let row = `
+        <tr>
+          <td>${item.name}</td>
+          <td>${item.price}</td>
+          <td>
+            <input type="number" value="${item.quantity}" min="1" class="form-control w-50 mx-auto" onchange="updateQuantity(${index}, this.value)">
+          </td>
+          <td>${item.price * item.quantity}</td>
+          <td><button class="btn btn-danger btn-sm" onclick="removeItem(${index})"><i class="bi bi-trash"></i></button></td>
+        </tr>
+      `;
+      cartTable.innerHTML += row;
+      subtotal += item.price * item.quantity;
+    });
+
+    document.getElementById("subtotal").innerText = subtotal;
+    let tax = (subtotal * 0.05).toFixed(2);
+    document.getElementById("tax").innerText = tax;
+    document.getElementById("grandtotal").innerText = (subtotal + parseFloat(tax)).toFixed(2);
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }
+
+  function updateQuantity(index, qty) {
+    cart[index].quantity = parseInt(qty);
+    renderCart();
+  }
+
+  function removeItem(index) {
+    cart.splice(index, 1);
+    renderCart();
+  }
+
+  renderCart();
+  
+</script>
+
+</body>
+</html>
