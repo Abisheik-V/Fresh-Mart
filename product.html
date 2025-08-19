@@ -611,7 +611,7 @@
       button.addEventListener("click", function() {
         let card = button.closest(".card");
         let name = card.querySelector(".card-title").innerText;
-        let price = parseFloat(card.querySelector(".price").innerText);
+        let price = parseFloat(card.querySelector(".price").innerText.replace("₹", "").replace("/kg", "").trim());
 
         let existing = cart.find(item => item.name === name);
         if (existing) {
